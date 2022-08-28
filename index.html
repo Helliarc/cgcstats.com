@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGC Farming Simulator</title>
+    <link rel="icon" type="image/svg+xml" href="img/tractor.svg">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav name="navbar">
+        <ul class="Navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">CGC Stats</a></li>
+            <li style="float:right"><a class="hamburger" href="index.html">Menu</a></li>
+        </ul>
+    </nav>
+
+    <div class="nftSelectMenu">
+        <ul>
+            <li><label for="seasonSelect">NFT Season: </label><select id="seasonSelect" onchange="updateForms();"></select></li>
+            <li><label for="nftSelect">Catgirl NFT: </label><select id="nftSelect"></select></li>
+            <li><label for="slotSelect">Farming Slot: </label><select id="slotSelect"></select></li>
+            <li><form onkeypress="return event.keyCode != 13">
+                <label for="nyaScore">NYA Score: </label><input type="number" id="nyaScore" placeholder="50">
+            </form></li>
+            <li><button onclick="addNFT();">Add NFT</button></li>
+        </ul>
+        <ul>
+            <li><label for="farmingPeriod">Farming Period: </label><select id="farmingPeriod" onchange="updateFP()"></select></li>
+            <li><label for="farmEnhancements">Enhancement Level: </label><select id="enhancementLevel" onchange="updateFP();"></select></li>
+        </ul>
+    </div>
+
+    <div class="farmTable">
+        <ul>
+            <li id="slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="slot1img">
+                <p class="NYAol" id="slot1nya"></p>
+                <p class="nftFP" id="slot1fp"></p>
+            </li>
+            <li id="slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="slot2img">
+                <p class="NYAol" id="slot2nya"></p>
+                <p class="nftFP" id="slot2fp"></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE2" onclick="slot2.setEnhancement(1)">Enhance</button></p>
+            </li>
+            <li id="slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="slot3img">
+                <p class="NYAol" id="slot3nya"></p>
+                <p class="nftFP" id="slot3fp"></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE3" onclick="slot3.setEnhancement(2)">Enhance</button></p>
+            </li>
+            <li id="slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="slot4img">
+                <p class="NYAol" id="slot4nya"></p>
+                <p class="nftFP" id="slot4fp"></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE4" onclick="slot4.setEnhancement(3)">Enhance</button></p>
+            </li>
+            <li id="slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="slot5img">
+                <p class="NYAol" id="slot5nya"></p>
+                <p class="nftFP" id="slot5fp"></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE5" onclick="slot5.setEnhancement(4)">Enhance</button></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="farmingPower">
+        <h2>Total Farming Power</h2>
+        <p id="totalFP">0</p>
+    </div>
+
+    <div class="WakeUp">
+        <h2>$PAW to Wake Up</h2>
+        <p id="pawWakeUp">0</p>
+        <h2>$PAW to Farm</h2>
+        <p id="pawFarmSlot">0</p>
+        <h2>Total $PAW to Wake Up and Farm</h2>
+        <p id="pawFarm">0</p>
+    </div>
+
+    <div class="LP">
+        <h2>Your LP Tokens</h2>
+        <p><form onkeypress="return event.keyCode != 13">
+            <label for="LPPaw">Total LP Tokens: </label><input type="number" id="LPPaw" placeholder="10">
+        </form></p>
+        <p>PAW Generation: <span id="generatingPaw">0</span></p>
+    </div>
+
+    <div class="farmControls">
+        <ul>
+            <li><button onclick="resetFarm();">Reset Farm</button></li>
+            <li><button id="randomPopulateFarm" onclick="randomPopulateFarm()">Populate Farm</button></li>
+        </ul>
+    </div>
+
+    <div>
+        
+    </div>
+
+    <!--  Fluff to test scrolling
+    <div class="fluff">
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+    </div>
+    -->
+
+
+    <hr> <!-- line break to footer -->
+    <footer>
+        <ul>
+            <li>All rights to CGC and Catgirl belong to Catgirl.io, all information on this site is an estimation and shall not be misconstrued as fact or proper investment advice. This website is for entertainment purposes only and is not endorsed or sponsored in any way by the Catgirlcoin development team.</li>
+            <li><a href="/links">Official Links</a></li>
+            <li>Author: Helliarc</li>
+            <li><a href="/donate.htm">Donate to the Farming Simulator</a></li>
+        </ul>
+    </footer>
+    <script src="js/init.js"></script>
+    <script src="js/catgirlnft.js"></script>
+    <script src="js/enhancement.js"></script>
+    <script src="js/farming.js"></script>
+    <script src="js/farmingperiod.js"></script>
+    <script src="js/farmingslot.js"></script>
+    <script src="js/paw.js"></script>
+    <script src="js/testingFunctions.js"></script>
+    <script type="text/javascript">populateForms();</script>
+</body>
+</html>

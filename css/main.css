@@ -1,0 +1,110 @@
+li {
+  color: #ffe6ee;
+  text-align: center;
+}
+
+a {
+  color: #ffe6ee;
+}
+
+a:hover {
+  color: #ff80c5;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #313131;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /*  //Bottom Border of NAVBAR (Ugly way???)
+  border-bottom-color: #ff6696;
+  border-bottom-width: 5px;  
+  border-bottom-style: ridge;
+  */
+}
+nav li {
+  float: left;
+}
+nav li a {
+  display: block;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+nav li a:hover:not(.active) {
+  background-color: #292929;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 5px 2px 2px #ff6696;
+}
+nav .active {
+  background-color: #ff6696;
+  color: #ff0051;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 5px 2px 2px #ff0051;
+}
+
+body {
+  background: #313131;
+  padding: 30px 0px;
+  height: 100vh;
+}
+
+.nftSelectMenu ul {
+  list-style-type: none;
+}
+.nftSelectMenu form input {
+  width: 50px;
+  box-sizing: border-box;
+  border: 2px solid #ff6696;
+  border-radius: 4px;
+}
+
+.farmTable {
+  align-content: center;
+}
+.farmTable ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+.farmTable li {
+  display: inline-block;
+  align-items: center;
+  margin: 10px;
+}
+.farmTable li .NYAol {
+  position: relative;
+  bottom: 200px;
+  right: 60px;
+  font-family: sans-serif;
+  color: #ff80c5;
+  font-size: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: bottom;
+  bottom: 0;
+  width: 100%;
+  background-color: #313131;
+}
+footer li {
+  text-align: center;
+  font-size: 12px;
+}/*# sourceMappingURL=main.css.map */
