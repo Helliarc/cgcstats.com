@@ -10,4 +10,4 @@ class FarmingPeriod {
 let sevenDay = new FarmingPeriod("7 day", 7, .5, 0);
 let fourteenDay = new FarmingPeriod("14 day", 14, 1, 4000);
 
-var farmingPeriods = [sevenDay, fourteenDay];
+var farmingPeriods = [fourteenDay, sevenDay];

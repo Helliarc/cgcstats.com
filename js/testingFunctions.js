@@ -25,12 +25,8 @@ function addRandomNFT(slot, NFT, NYA){
     farmingSlots[slot].nft = nft;
     farmingSlots[slot].nya[0] = NYA;
     farmingSlots[slot].image[0] = nft.image;
-    farmingSlots[slot].wakeUp = PAWwakeUp(nft.wakeUp, NYA);
     
-    farmingSlots[slot].setFP();
-    farmingSlots[slot].updateImage();
-    farmingSlots[slot].updateNYA();
-    farmingSlots[slot].updateFP();
+    farmingSlots[slot].updateSlot();
 
     updateTotalFP();
 }

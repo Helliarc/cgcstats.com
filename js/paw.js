@@ -1,13 +1,41 @@
+/* 
+    Base PAW Wakeup of NFT and NYA score to determing wake-up costs in $PAW
+*/
 function PAWwakeUp(PAW, NYA){
-    return (PAW + (PAW*(NYA/100)));
+    let wakeup = (PAW + (PAW*(NYA/100)))
+    return wakeup;
 }
 
-function PAWtoFarm(farmingPeriod){
-    if (farmingPeriod == "7 day"){
-        return 0;
-    }
+function PAWtoFarm(){
+    let farmingPeriod = document.getElementById("farmingPeriod").value;
+    let pawFarm = 0;
 
-    if (farmingPeriod == "14 day"){
-        return 4000;
+    for (let i = 0; i < farmingPeriods.length; i++){
+        if (farmingPeriod == farmingPeriods[i].name){
+            pawFarm = +farmingPeriods[i].cost;
+        }
     }
+    return pawFarm;
+}
+
+function updateTotalPAW(){
+    let pawWake = 0;
+    for(let i = 0; i < farmingSlots.length; ++i){
+        pawWake = pawWake + farmingSlots[i].wakeUp[0];
+    }
+    document.getElementById("pawWakeUp").innerHTML = pawWake;
+
+    let pawFarm = PAWtoFarm();
+    document.getElementById("pawFarmSlot").innerHTML = +pawFarm;
+
+    let totalPAW = pawWake + pawFarm;
+    document.getElementById("pawFarm").innerHTML = totalPAW;
+}
+
+function pawGenerated(){
+    let generatingPaw = document.getElementById("LPPaw").value * 100;
+    let maxPaw = generatingPaw * 30;
+    
+    document.getElementById("generatingPaw").innerHTML = generatingPaw;
+    document.getElementById("maxPaw").innerHTML = maxPaw;
 }

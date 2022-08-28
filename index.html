@@ -23,13 +23,14 @@
             <li><label for="nftSelect">Catgirl NFT: </label><select id="nftSelect"></select></li>
             <li><label for="slotSelect">Farming Slot: </label><select id="slotSelect"></select></li>
             <li><form onkeypress="return event.keyCode != 13">
-                <label for="nyaScore">NYA Score: </label><input type="number" id="nyaScore" placeholder="50">
+                <label for="nyaScore">NYA Score: </label><input type="number" id="nyaScore" min='1' max="100" placeholder="50">
             </form></li>
             <li><button onclick="addNFT();">Add NFT</button></li>
+            <li id="errorAdd"></li>
         </ul>
         <ul>
-            <li><label for="farmingPeriod">Farming Period: </label><select id="farmingPeriod" onchange="updateFP()"></select></li>
-            <li><label for="farmEnhancements">Enhancement Level: </label><select id="enhancementLevel" onchange="updateFP();"></select></li>
+            <li><label for="farmingPeriod">Farming Period: </label><select id="farmingPeriod" onchange="updateTotalFP()"></select></li>
+            <li><label for="farmEnhancements">Enhancement Level: </label><select id="enhancementLevel" onchange="updateTotalFP();"></select></li>
         </ul>
     </div>
 
@@ -79,15 +80,16 @@
     <div class="LP">
         <h2>Your LP Tokens</h2>
         <p><form onkeypress="return event.keyCode != 13">
-            <label for="LPPaw">Total LP Tokens: </label><input type="number" id="LPPaw" placeholder="10">
+            <label for="LPPaw">Total LP Tokens: </label><input type="number" id="LPPaw" placeholder="10" onchange="pawGenerated();">
         </form></p>
-        <p>PAW Generation: <span id="generatingPaw">0</span></p>
+        <p>PAW Generation: <span id="generatingPaw">0</span>/day</p>
+        <p>Max PAW: <span id="maxPaw">0</span></p>
     </div>
 
     <div class="farmControls">
         <ul>
             <li><button onclick="resetFarm();">Reset Farm</button></li>
-            <li><button id="randomPopulateFarm" onclick="randomPopulateFarm()">Populate Farm</button></li>
+            <li><button id="randomPopulateFarm" onclick="randomPopulateFarm()">Random Farm</button></li>
         </ul>
     </div>
 
@@ -133,6 +135,7 @@
     <script src="js/init.js"></script>
     <script src="js/catgirlnft.js"></script>
     <script src="js/enhancement.js"></script>
+    <script src="js/farm.js"></script>
     <script src="js/farming.js"></script>
     <script src="js/farmingperiod.js"></script>
     <script src="js/farmingslot.js"></script>
