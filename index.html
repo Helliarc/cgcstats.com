@@ -90,11 +90,146 @@
         <ul>
             <li><button onclick="resetFarm();">Reset Farm</button></li>
             <li><button id="randomPopulateFarm" onclick="randomPopulateFarm()">Random Farm</button></li>
+            <li><button id="savefarm" onclick="saveFarm();">Save Farm</button><select id="memorySelect"></select></li>
+            <li><button id="getfarm" onclick="getFarm();">Get Farm</button></li>
         </ul>
     </div>
 
     <div>
         
+    </div>
+
+    <div class="savedFarmTable">
+        <ul>
+            <li id="FT1slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot1img">
+                <p class="FTNYAol" id="FT1slot1nya"></p>
+                <p class="FTnftFP" id="FT1slot1fp"></p>
+            </li>
+            <li id="FT1slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot2img">
+                <p class="FTNYAol" id="FT1slot2nya"></p>
+                <p class="FTnftFP" id="FT1slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT1slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot3img">
+                <p class="FTNYAol" id="FT1slot3nya"></p>
+                <p class="FTnftFP" id="FT1slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT1slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot4img">
+                <p class="FTNYAol" id="FT1slot4nya"></p>
+                <p class="FTnftFP" id="FT1slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT1slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot5img">
+                <p class="FTNYAol" id="FT1slot5nya"></p>
+                <p class="FTnftFP" id="FT1slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT2slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot1img">
+                <p class="FTNYAol" id="FT2slot1nya"></p>
+                <p class="FTnftFP" id="FT2slot1fp"></p>
+            </li>
+            <li id="FT2slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot2img">
+                <p class="FTNYAol" id="FT2slot2nya"></p>
+                <p class="FTnftFP" id="FT2slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT2slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot3img">
+                <p class="FTNYAol" id="FT2slot3nya"></p>
+                <p class="FTnftFP" id="FT2slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT2slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot4img">
+                <p class="FTNYAol" id="FT2slot4nya"></p>
+                <p class="FTnftFP" id="FT2slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT2slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot5img">
+                <p class="FTNYAol" id="FT2slot5nya"></p>
+                <p class="FTnftFP" id="FT2slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT3slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot1img">
+                <p class="FTNYAol" id="FT3slot1nya"></p>
+                <p class="FTnftFP" id="FT3slot1fp"></p>
+            </li>
+            <li id="FT3slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot2img">
+                <p class="FTNYAol" id="FT3slot2nya"></p>
+                <p class="FTnftFP" id="FT3slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT3slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot3img">
+                <p class="FTNYAol" id="FT3slot3nya"></p>
+                <p class="FTnftFP" id="FT3slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT3slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot4img">
+                <p class="FTNYAol" id="FT3slot4nya"></p>
+                <p class="FTnftFP" id="FT3slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT3slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot5img">
+                <p class="FTNYAol" id="FT3slot5nya"></p>
+                <p class="FTnftFP" id="FT3slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT4slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot1img">
+                <p class="FTNYAol" id="FT4slot1nya"></p>
+                <p class="FTnftFP" id="FT4slot1fp"></p>
+            </li>
+            <li id="FT4slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot2img">
+                <p class="FTNYAol" id="FT4slot2nya"></p>
+                <p class="FTnftFP" id="FT4slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT4slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot3img">
+                <p class="FTNYAol" id="FT4slot3nya"></p>
+                <p class="FTnftFP" id="FT4slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT4slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot4img">
+                <p class="FTNYAol" id="FT4slot4nya"></p>
+                <p class="FTnftFP" id="FT4slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT4slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot5img">
+                <p class="FTNYAol" id="FT4slot5nya"></p>
+                <p class="FTnftFP" id="FT4slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT5slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot1img">
+                <p class="FTNYAol" id="FT5slot1nya"></p>
+                <p class="FTnftFP" id="FT5slot1fp"></p>
+            </li>
+            <li id="FT5slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot2img">
+                <p class="FTNYAol" id="FT5slot2nya"></p>
+                <p class="FTnftFP" id="FT5slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT5slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot3img">
+                <p class="FTNYAol" id="FT5slot3nya"></p>
+                <p class="FTnftFP" id="FT5slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT5slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot4img">
+                <p class="FTNYAol" id="FT5slot4nya"></p>
+                <p class="FTnftFP" id="FT5slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT5slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot5img">
+                <p class="FTNYAol" id="FT5slot5nya"></p>
+                <p class="FTnftFP" id="FT5slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
     </div>
 
     <!--  Fluff to test scrolling

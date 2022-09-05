@@ -94,6 +94,31 @@ body {
   font-size: 20px;
 }
 
+.savedFarmTable {
+  align-content: center;
+}
+.savedFarmTable ul {
+  list-style-type: none;
+  margin: 1px;
+  padding: 1px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+.savedFarmTable li {
+  display: inline-block;
+  align-items: center;
+  margin: 2px;
+}
+.savedFarmTable li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+
 footer ul {
   list-style-type: none;
   margin: 0;

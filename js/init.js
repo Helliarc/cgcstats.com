@@ -45,6 +45,21 @@ function populateForms(){
             el.value = optn;
             enhancementLevel.appendChild(el);
     }
+
+    for (var i = 0; i < farmNames.length; i++){
+        var optn = farmNames[i];
+            var el = document.createElement("option");
+            el.textContent = optn;
+            el.value = optn;
+            memorySelect.appendChild(el);
+    }
+
+    /*
+    Checks if localStorage contains a farm, if so, loads it into viewer.
+    */
+    if (localStorage.length > 0){
+        getFarmInit();
+    }
 }
 
 /*
