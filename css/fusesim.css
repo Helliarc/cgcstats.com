@@ -42,4 +42,117 @@ h1 {
   margin: auto;
   margin-top: 25px;
   font-size: 1.3em;
+}
+
+.linebreak {
+  width: 80%;
+  margin: auto;
+  padding-top: 25px;
+  margin-bottom: 25px;
+  border-bottom: 2px #ff6696 solid;
+}
+
+.nftSelectMenu ul {
+  list-style-type: none;
+  padding: 0px;
+  min-width: 300px;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+.nftSelectMenu li {
+  padding: 5px;
+}
+.nftSelectMenu select {
+  height: 30px;
+  border: 2px #ff6696 solid;
+  border-radius: 4px;
+  background-color: #ffe6ee;
+  box-shadow: 4px 4px #802642;
+}
+.nftSelectMenu form input {
+  width: 50px;
+  height: 30px;
+  border: 2px solid #ff6696;
+  border-radius: 4px;
+  background-color: #ffe6ee;
+}
+.nftSelectMenu .theNFT {
+  text-align: center;
+  padding: 0;
+  min-width: 300px;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+.nftSelectMenu .theNFT li {
+  display: inline-block;
+}
+.nftSelectMenu .theButton {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.nftSelectMenu .theButton button {
+  background-color: #ff6696;
+  border-radius: 5px;
+  width: 150px;
+  height: 33px;
+  border: 1px #802642 solid;
+}
+.nftSelectMenu .theButton button:hover {
+  background-color: #802642;
+  border-color: #ff6696;
+  box-shadow: 4px 4px #ff6696;
+}
+.nftSelectMenu .theButton button:active {
+  background-color: #ff6696;
+  border: 1px #802642 solid;
+  box-shadow: 4px 4px #802642;
+}
+
+.burnTable {
+  list-style-type: none;
+  text-align: center;
+  padding: 50px;
+  min-width: 350px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border: 2px #ff6696 solid;
+  background-color: #6b4c4c;
+  border-radius: 10px;
+  z-index: 0;
+}
+.burnTable ul {
+  display: inline-block;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.burnTable li {
+  position: relative;
+  display: inline-block;
+  width: 15%;
+}
+.burnTable li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  top: 0;
+  background-color: #313131;
+  border: 2px #ff6696 solid;
+  border-radius: 5px;
+}
+.burnTable li p {
+  display: inline-block;
+  width: 100%;
+  font-size: 2.7vw;
+}
+.burnTable li .NYAol {
+  float: left;
+  color: #ff80c5;
 }/*# sourceMappingURL=fusesim.css.map */

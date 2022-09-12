@@ -127,6 +127,9 @@ body {
 .farmTable li .nftFP {
   color: #ff80c5;
 }
+.farmTable li .enhancement {
+  height: auto;
+}
 .farmTable li .enhanceButton {
   border: 2px #ff6696 solid;
   border-radius: 4px;
