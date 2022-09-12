@@ -7,7 +7,7 @@ The CGC Farming Simulator is a utility website intended to simulate the stats of
 
 This repository is currently private to keep participation limited to only interested parties, it is intended to reach "public" status once a baseline 1.0 version is established by those involved in the first iteration of the private repository.
 
-In its current state, the CGC Farming Simulator JS files are divided into separate class and function files to facilitate the organization of code.  The intention is to use a combinator to combine all JS files into 1 file to facilitate the HTML download of "less documents".  This will be implemented in the baseline 1.0 version of the website.
+/* In its current state, the CGC Farming Simulator JS files are divided into separate class and function files to facilitate the organization of code.  The intention is to use a combinator to combine all JS files into 1 file to facilitate the HTML download of "less documents".  This will be implemented in the baseline 1.0 version of the website. */ Deprecated as no longer required once site is HTTPS secured.
 
 The CGC Farming Simulator is a PAGE of the cgcstats.com website.  Additional features and data will be added as progress is made.  Such features include graphs tracking price data/trends/other relatable data, a live Catgirl NFT Table, wallet log-in, saving/loading farm data, and other features.  Ideas and contributions are welcome!  If you are a PROFESSIONAL web developer, please refrain from "leet code solutions", most contributors to this tool are Junior level or less, instead please provide constructive feedback and recommendations to problems and features of the site.  We'd prefer your expertise be in a mentorship role.  
 
