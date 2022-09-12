@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+li {
+  color: #ffe6ee;
+  text-align: center;
+}
+
+a {
+  color: #ffe6ee;
+}
+
+a:hover {
+  color: #ff80c5;
+}
+
+body {
+  background: #313131;
+  padding-top: 55px;
+  height: 100vh;
+}
+
+.nftSelectMenu ul {
+  list-style-type: none;
+  padding: 0px;
+  min-width: 550px;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+.nftSelectMenu li {
+  padding: 5px;
+}
+.nftSelectMenu select {
+  height: 30px;
+  border: 2px #ff6696 solid;
+  border-radius: 4px;
+  background-color: #ffe6ee;
+  box-shadow: 4px 4px #802642;
+}
+.nftSelectMenu form input {
+  width: 50px;
+  height: 30px;
+  border: 2px solid #ff6696;
+  border-radius: 4px;
+  background-color: #ffe6ee;
+}
+.nftSelectMenu .theNFT {
+  text-align: center;
+  padding: 0;
+  min-width: 550px;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+.nftSelectMenu .theNFT li {
+  display: inline-block;
+}
+.nftSelectMenu .theButton {
+  min-width: 550px;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.nftSelectMenu .theButton button {
+  background-color: #ff6696;
+  border-radius: 5px;
+  width: 150px;
+  height: 33px;
+  border: 1px #802642 solid;
+}
+.nftSelectMenu .theButton button:hover {
+  background-color: #802642;
+  border-color: #ff6696;
+  box-shadow: 4px 4px #ff6696;
+}
+.nftSelectMenu .theButton button:active {
+  background-color: #ff6696;
+  border: 1px #802642 solid;
+  box-shadow: 4px 4px #802642;
+}
+
+.farmTable {
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+  min-width: 450px;
+  width: 60%;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.farmTable ul {
+  display: inline-block;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.farmTable li {
+  position: relative;
+  display: inline-block;
+  width: 15%;
+}
+.farmTable li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  top: 0;
+  background-color: #313131;
+  border: 2px #ff6696 solid;
+  border-radius: 5px;
+}
+.farmTable li p {
+  display: inline-block;
+  width: 100%;
+}
+.farmTable li .NYAol {
+  float: left;
+  color: #ff80c5;
+}
+.farmTable li .nftFP {
+  color: #ff80c5;
+}
+.farmTable li .enhanceButton {
+  border: 2px #ff6696 solid;
+  border-radius: 4px;
+  background-color: #ffe6ee;
+  box-shadow: 4px 4px #802642;
+}
+
+.periodEnhance ul {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+.periodEnhance li {
+  display: inline-block;
+  padding: 5px;
+}
+.periodEnhance select {
+  height: 30px;
+  border: 2px #ff6696 solid;
+  border-radius: 4px;
+  background-color: #ffe6ee;
+  box-shadow: 4px 4px #802642;
+}
+
+.linebreak {
+  width: 80%;
+  margin: auto;
+  padding-top: 25px;
+  margin-bottom: 25px;
+  border-bottom: 2px #ff6696 solid;
+}
+
+.farmStats {
+  text-align: center;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+.farmStats .farmingPower {
+  width: 30%;
+  max-width: 300px;
+  min-width: 250px;
+  margin: auto;
+}
+.farmStats .farmingPower h2 {
+  border: 2px #ff6696 solid;
+  background-color: #ffe6ee;
+  color: #313131;
+  padding: 0px;
+}
+.farmStats .farmingPower p {
+  border: 2px #ff6696 solid;
+  color: #ff80c5;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+
+.wakeUp {
+  text-align: center;
+}
+.wakeUp ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.wakeUp ul li {
+  display: inline-block;
+}
+.wakeUp ul p {
+  border: 2px #ff80c5 solid;
+}
+.wakeUp ul .head {
+  background-color: #ffe6ee;
+  color: #313131;
+  font-weight: bold;
+}
+
+.LP {
+  text-align: center;
+}
+.LP h2 {
+  color: #ffe6ee;
+  text-decoration: underline;
+}
+.LP .enterLP {
+  list-style-type: none;
+  width: 40%;
+  margin: auto;
+  padding: 0;
+}
+.LP .enterLP #LPPaw {
+  width: 15%;
+  min-width: 40px;
+  max-width: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.LP .pawGen {
+  list-style-type: none;
+  padding: 0px;
+}
+.LP .pawGen li {
+  display: inline-block;
+}
+.LP .pawGen p {
+  border: 2px #ff80c5 solid;
+}
+.LP .pawGen .head {
+  background-color: #ffe6ee;
+  color: #313131;
+  font-weight: bold;
+}
+
+.farmControls {
+  align-content: center;
+}
+.farmControls ul {
+  list-style-type: none;
+  margin: 1px;
+  padding: 1px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+
+.savedFarmTable {
+  align-content: center;
+  width: 300px;
+  margin: auto;
+}
+.savedFarmTable ul {
+  list-style-type: none;
+  margin: 1px;
+  padding: 1px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+.savedFarmTable li {
+  display: inline-block;
+  align-items: center;
+  margin: 2px;
+}
+.savedFarmTable li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: bottom;
+  bottom: 0;
+  width: 100%;
+  background-color: #313131;
+}
+footer li {
+  text-align: center;
+  font-size: 12px;
+}/*# sourceMappingURL=farmsim.css.map */

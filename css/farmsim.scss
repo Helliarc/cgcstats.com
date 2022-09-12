@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+li {
+    color: #ffe6ee;
+    text-align: center;
+}
+
+a{
+    color: #ffe6ee;
+}
+
+a:hover{
+    color: #ff80c5;
+}
+
+body {
+    background: #313131;
+    padding-top: 55px;
+    height: 100vh;  //can set a maximum/minimum height of the body contents (Creates a bunch of white space or eliminates white space)
+}
+
+.nftSelectMenu {
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        min-width: 550px;
+        width: 60%;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+    select{
+        height: 30px;
+        border: 2px #ff6696 solid;
+        border-radius: 4px;
+        background-color: #ffe6ee;
+        box-shadow: 4px 4px #802642;
+    }
+
+    form {
+
+        input{
+        width: 50px;
+        height: 30px;
+
+        border: 2px solid #ff6696;
+        border-radius: 4px;
+        background-color: #ffe6ee;
+        }    
+    }
+
+    .theNFT{
+        text-align: center;
+        padding: 0;
+        min-width: 550px;
+        width: 60%;
+        max-width: 1000px;
+        margin: auto;
+        
+        li{
+            display: inline-block;
+        }
+    }
+
+    .theButton{
+        min-width: 550px;
+        width: 60%;
+        max-width: 1000px;
+        margin: auto;
+        text-align:center;
+
+        button{
+            background-color:#ff6696;
+            border-radius: 5px;
+            width: 150px;
+            height: 33px;
+            border: 1px #802642 solid;
+        }
+        button:hover{
+            background-color: #802642;
+            border-color: #ff6696;
+            box-shadow: 4px 4px #ff6696;
+        }
+        button:active{
+            background-color:#ff6696;
+            border: 1px #802642 solid;
+            box-shadow: 4px 4px #802642;
+        }
+    }
+
+}
+
+.farmTable {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+    min-width: 450px;
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    // border: 2px #ff6696 solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    //background-color: lightgreen;
+    ul{
+        display: inline-block;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        }
+
+    li {
+        position: relative;
+        display: inline-block;
+        width: 15%;
+
+        img{
+            object-fit: cover;
+            width: 100%;
+            top: 0;
+            background-color: #313131;
+            border: 2px #ff6696 solid;
+            border-radius: 5px;
+        }
+
+        p {
+            display: inline-block;
+            width: 100%;
+            // border: 1px red solid;
+        }
+
+        .NYAol {
+            // position:absolute;
+            // bottom: -20%;
+            float: left;
+            color: #ff80c5;
+        }
+        .nftFP {
+            // position:absolute;
+            // bottom: -40%;
+            color: #ff80c5;
+        }
+
+        .enhanceButton {
+            border: 2px #ff6696 solid;
+            border-radius: 4px;
+            background-color: #ffe6ee;
+            box-shadow: 4px 4px #802642;
+        }
+    }
+
+    
+}
+
+.periodEnhance {
+    ul {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+    }
+
+    li {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    select{
+        height: 30px;
+        border: 2px #ff6696 solid;
+        border-radius: 4px;
+        background-color: #ffe6ee;
+        box-shadow: 4px 4px #802642;
+    }
+}
+
+.linebreak { //add a <p class="linebreak"></p> anywhere in the HTML that you want this line-break...
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    border-bottom: 2px #ff6696 solid;
+}
+
+.farmStats{
+    text-align: center;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    .farmingPower{
+        width: 30%;
+        max-width: 300px;
+        min-width: 250px;
+        margin: auto;
+        h2{
+            border: 2px #ff6696 solid;
+            background-color: #ffe6ee;
+            color:#313131;
+            padding: 0px;
+        }
+        p{
+            border: 2px #ff6696 solid;
+            color: #ff80c5;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+.wakeUp{
+    text-align: center;
+    
+    ul{
+        list-style-type: none;
+        padding: 0px;
+
+        li {
+            display: inline-block;
+        }
+
+        p {
+            border: 2px #ff80c5 solid;
+        }
+
+        .head {
+            background-color: #ffe6ee;
+            color: #313131;
+            font-weight: bold;
+        }
+    }
+}
+
+.LP {
+    text-align: center;
+
+    h2 {
+        color:#ffe6ee;
+        text-decoration: underline;
+    }
+
+    .enterLP {
+        list-style-type: none;
+        width: 40%;
+        margin:auto;
+        padding: 0;
+
+        #LPPaw {
+            width: 15%;
+            min-width: 40px;
+            max-width: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+    
+    .pawGen {
+        list-style-type: none;
+        padding: 0px;
+
+        li {
+            display: inline-block;
+        }
+
+        p {
+            border: 2px #ff80c5 solid;
+        }
+
+        .head {
+            background-color: #ffe6ee;
+            color: #313131;
+            font-weight: bold;
+        }
+    }
+}
+
+.farmControls{
+    align-content: center;
+    ul{
+        list-style-type: none;
+        margin: 1px;
+        padding: 1px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        align-items: center;
+        top: 0;
+    }
+}
+
+.savedFarmTable {
+    align-content: center;
+    width: 300px;
+    margin: auto;
+    ul{
+        list-style-type: none;
+        margin: 1px;
+        padding: 1px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        align-items: center;
+        top: 0;
+    }
+
+    
+
+    li {
+        display: inline-block;
+        align-items: center;
+        margin: 2px;
+
+
+        img {
+            object-fit: cover;
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    
+}
+
+footer{
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+        background-color: #313131;
+    }
+
+    li {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+

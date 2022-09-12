@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGC Farming Simulator</title>
+    <link rel="icon" type="image/svg+xml" href="img/tractor.svg">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/farmsim.css">
+</head>
+<body>
+    <nav name="navbar">
+        <ul class="Navbar">
+            <li class="homeSVG"><a href="index.html"><img alt="homePaw" width=50 src="img/homePaw.svg"></a></li>
+            <li><a href="cgcstats.html">CGC Stats</a></li>
+            <li><a class= 'active' href="farmingsimulator.html">Farming Simulator</a></li>
+            <li><a href="fusesimulator.html">Fuse Simulator</a></li>
+        </ul>
+    </nav>
+
+    <div class="nftSelectMenu">
+        <ul>
+            <li><label for="seasonSelect">NFT Season: </label><select id="seasonSelect" onchange="updateForms();"></select></li>
+        </ul>
+        <ul class="theNFT">
+            <li><label for="nftSelect">Catgirl NFT: </label><select id="nftSelect"></select></li>
+            <li><form onkeypress="return event.keyCode != 13">
+                <label for="nyaScore">NYA Score: </label><input type="number" id="nyaScore" min='1' max="100" placeholder="50">
+                </form></li>
+            <li><label for="slotSelect">Farming Slot: </label><select id="slotSelect"></select></li>
+        </ul>
+        <ul class="theButton">
+            <li><button type="button" class="addNFTbutton" onclick="addNFT();">Add NFT</button></li>
+            <li id="errorAdd"></li>
+        </ul>
+    </div>
+
+    <div class="farmTable">
+        <ul>
+            <li id="slot1">
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot1img"></p>
+                <p class="NYAol">NYA: <span id="slot1nya"></span></p>
+                <p class="nftFP">FP: <span id="slot1fp"></span></p>
+                <p></p>
+                <!-- <p class="enhancement"><button class="enhanceButton" id="buttE1" onclick="slot1.setEnhancement(1)"></button></p> -->
+            </li>
+            <li id="slot2">
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot2img" onclick=""></p>
+                <p class="NYAol">NYA: <span id="slot2nya"></span></p>
+                <p class="nftFP">FP: <span id="slot2fp"></span></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE2" onclick="slot2.setEnhancement(1)">Enhance</button></p>
+            </li>
+            <li id="slot3">
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot3img"></p>
+                <p class="NYAol">NYA: <span id="slot3nya"></span></p>
+                <p class="nftFP">FP: <span id="slot3fp"></span></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE3" onclick="slot3.setEnhancement(2)">Enhance</button></p>
+            </li>
+            <li id="slot4">
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot4img"></p>
+                <p class="NYAol">NYA: <span id="slot4nya"></span></p>
+                <p class="nftFP">FP: <span id="slot4fp"></span></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE4" onclick="slot4.setEnhancement(3)">Enhance</button></p>
+            </li>
+            <li id="slot5">
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot5img"></p>
+                <p class="NYAol">NYA: <span id="slot5nya"></span></p>
+                <p class="nftFP">FP: <span id="slot5fp"></span></p>
+                <p class="enhancement"><button class="enhanceButton" id="buttE5" onclick="slot5.setEnhancement(4)">Enhance</button></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="periodEnhance">
+        <ul>
+            <li><label for="farmingPeriod">Farming Period: </label><select id="farmingPeriod" onchange="updateTotalFP()"></select></li>
+            <li><label for="farmEnhancements">Enhancement Level: </label><select id="enhancementLevel" onchange="updateTotalFP();"></select></li>
+        </ul>
+    </div>
+
+    <p class="linebreak"></p>
+
+    <div class="farmStats">
+        <div class="farmingPower">
+            <h2>Total Farming Power</h2>
+            <p id="totalFP">0</p>
+        </div>
+    </div>
+
+    <p class="linebreak"></p>
+
+    <div class="wakeUp">
+        <ul>
+            <li class="left">
+                <p class="head">$PAW to Wake-Up</p>
+                <p class="body" id="pawWakeUp">0</p>
+            </li>
+            <li class="operand">+</li>
+            <li class="left">
+                <p class="head">$PAW to Farm</p>
+                <p class="body" id="pawFarmSlot">0</p>
+            </li>
+            <li class="operand">=</li>
+            <li class="right">
+                <p class="head">Total $PAW to Wake Up and Farm</p>
+                <p class="body" id="pawFarm">0</p>
+            </li>
+        </ul>
+    </div>
+
+    <p class="linebreak"></p>
+
+    <div class="LP">
+        <h2>Your LP Tokens</h2>
+        <ul class="enterLP">
+            <li><form onkeypress="return event.keyCode != 13">
+                <p><label for="LPPaw">Total LP Tokens: </label><input type="number" id="LPPaw" placeholder="10" onchange="pawGenerated();"></p></form>
+            </li>
+        </ul>
+        <ul class="pawGen">
+            <li>
+                <p class="head">PAW Generation: </p>
+                <p><span id="generatingPaw">0</span>/day</p>
+            </li>
+            <li>
+                <p class="head">Max PAW: </p>
+                <p><span id="maxPaw">0</span></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="farmControls">
+        <ul>
+            <li><button onclick="resetFarm();">Reset Farm</button></li>
+            <li><button id="randomPopulateFarm" onclick="randomPopulateFarm()">Random Farm</button></li>
+            <li><button id="savefarm" onclick="saveFarm();">Save Farm</button><select id="memorySelect"></select></li>
+            <li><button id="getfarm" onclick="getFarm();">Get Farm</button></li>
+        </ul>
+    </div>
+
+    <div>
+        
+    </div>
+
+    <div class="savedFarmTable">
+        <ul>
+            <li id="FT1slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot1img">
+                <p class="FTNYAol" id="FT1slot1nya"></p>
+                <p class="FTnftFP" id="FT1slot1fp"></p>
+            </li>
+            <li id="FT1slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot2img">
+                <p class="FTNYAol" id="FT1slot2nya"></p>
+                <p class="FTnftFP" id="FT1slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT1slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot3img">
+                <p class="FTNYAol" id="FT1slot3nya"></p>
+                <p class="FTnftFP" id="FT1slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT1slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot4img">
+                <p class="FTNYAol" id="FT1slot4nya"></p>
+                <p class="FTnftFP" id="FT1slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT1slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT1slot5img">
+                <p class="FTNYAol" id="FT1slot5nya"></p>
+                <p class="FTnftFP" id="FT1slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT2slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot1img">
+                <p class="FTNYAol" id="FT2slot1nya"></p>
+                <p class="FTnftFP" id="FT2slot1fp"></p>
+            </li>
+            <li id="FT2slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot2img">
+                <p class="FTNYAol" id="FT2slot2nya"></p>
+                <p class="FTnftFP" id="FT2slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT2slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot3img">
+                <p class="FTNYAol" id="FT2slot3nya"></p>
+                <p class="FTnftFP" id="FT2slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT2slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot4img">
+                <p class="FTNYAol" id="FT2slot4nya"></p>
+                <p class="FTnftFP" id="FT2slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT2slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT2slot5img">
+                <p class="FTNYAol" id="FT2slot5nya"></p>
+                <p class="FTnftFP" id="FT2slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT3slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot1img">
+                <p class="FTNYAol" id="FT3slot1nya"></p>
+                <p class="FTnftFP" id="FT3slot1fp"></p>
+            </li>
+            <li id="FT3slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot2img">
+                <p class="FTNYAol" id="FT3slot2nya"></p>
+                <p class="FTnftFP" id="FT3slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT3slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot3img">
+                <p class="FTNYAol" id="FT3slot3nya"></p>
+                <p class="FTnftFP" id="FT3slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT3slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot4img">
+                <p class="FTNYAol" id="FT3slot4nya"></p>
+                <p class="FTnftFP" id="FT3slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT3slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT3slot5img">
+                <p class="FTNYAol" id="FT3slot5nya"></p>
+                <p class="FTnftFP" id="FT3slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT4slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot1img">
+                <p class="FTNYAol" id="FT4slot1nya"></p>
+                <p class="FTnftFP" id="FT4slot1fp"></p>
+            </li>
+            <li id="FT4slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot2img">
+                <p class="FTNYAol" id="FT4slot2nya"></p>
+                <p class="FTnftFP" id="FT4slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT4slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot3img">
+                <p class="FTNYAol" id="FT4slot3nya"></p>
+                <p class="FTnftFP" id="FT4slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT4slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot4img">
+                <p class="FTNYAol" id="FT4slot4nya"></p>
+                <p class="FTnftFP" id="FT4slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT4slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT4slot5img">
+                <p class="FTNYAol" id="FT4slot5nya"></p>
+                <p class="FTnftFP" id="FT4slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+        <ul>
+            <li id="FT5slot1"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot1img">
+                <p class="FTNYAol" id="FT5slot1nya"></p>
+                <p class="FTnftFP" id="FT5slot1fp"></p>
+            </li>
+            <li id="FT5slot2"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot2img">
+                <p class="FTNYAol" id="FT5slot2nya"></p>
+                <p class="FTnftFP" id="FT5slot2fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT5slot3"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot3img">
+                <p class="FTNYAol" id="FT5slot3nya"></p>
+                <p class="FTnftFP" id="FT5slot3fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT5slot4"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot4img">
+                <p class="FTNYAol" id="FT5slot4nya"></p>
+                <p class="FTnftFP" id="FT5slot4fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+            <li id="FT5slot5"><img src="img/blank.jpg" alt="No NFT Selected" id="FT5slot5img">
+                <p class="FTNYAol" id="FT5slot5nya"></p>
+                <p class="FTnftFP" id="FT5slot5fp"></p>
+                <p class="FTenhancement"></p>
+            </li>
+        </ul>
+    </div>
+
+    <!--  Fluff to test scrolling
+    <div class="fluff">
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+    </div>
+    -->
+
+
+    <hr> <!-- line break to footer -->
+    <footer>
+        <ul>
+            <li>All rights to CGC and Catgirl belong to Catgirl.io, all information on this site is an estimation and shall not be misconstrued as fact or proper investment advice. This website is for entertainment purposes only and is not endorsed or sponsored in any way by the Catgirlcoin development team.</li>
+            <li><a href="/links">Official Links</a></li>
+            <li>Author: Helliarc</li>
+            <li><a href="/donate.htm">Donate to the Farming Simulator</a></li>
+        </ul>
+    </footer>
+    <!--
+    <script src="js/main.js"></script>
+    -->
+    <script src="js/init.js"></script>
+    <script src="js/catgirlnft.js"></script>
+    <script src="js/enhancement.js"></script>
+    <script src="js/farm.js"></script>
+    <script src="js/farming.js"></script>
+    <script src="js/farmingperiod.js"></script>
+    <script src="js/farmingslot.js"></script>
+    <script src="js/paw.js"></script>
+    <script src="js/testingFunctions.js"></script>
+
+    <script type="text/javascript">populateForms();</script>
+</body>
+</html>

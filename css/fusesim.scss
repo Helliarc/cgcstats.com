@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: #313131;
+    padding-top: 55px;
+    height: 100vh;  //can set a maximum/minimum height of the body contents (Creates a bunch of white space or eliminates white space)
+    color:#ffe6ee;
+}
+
+li {
+    color: #ffe6ee;
+    text-align: center;
+}
+
+a{
+    color: #ffe6ee;
+}
+
+a:hover{
+    color: #ff80c5;
+}
+
+.linebreak { //add a <p class="linebreak"></p> anywhere in the HTML that you want this line-break...
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+    border-bottom: 2px #ff80c5 solid;
+}
+
+h1 {
+    color:#ff80c5;
+    text-align:center;
+    margin-top: 25px;
+}
+
+.fusesimlnk {
+    text-align: center;
+    size: 90%;
+    margin: auto;
+    margin-top: 25px;
+    font-size: 1.3em;
+}
