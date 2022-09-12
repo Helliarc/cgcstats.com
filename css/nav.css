@@ -27,11 +27,11 @@ nav a {
   padding-inline: 10px;
   text-decoration: none;
 }
-nav a:hover:not(.active) {
+nav a:hover:not(.active) .Navbar {
   background-color: #292929;
   border-radius: 15px;
 }
-nav .active {
+nav .active a {
   background-color: #ff6696;
   color: #000000;
   border-radius: 15px;
@@ -44,4 +44,13 @@ nav .homeSVG img {
   top: 0px;
   left: 5px;
   width: 50px;
+}
+nav .mhome {
+  display: none;
+}
+nav .mimg {
+  display: none;
+}
+nav .activePage {
+  display: none;
 }/*# sourceMappingURL=nav.css.map */

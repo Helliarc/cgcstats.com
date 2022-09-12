@@ -30,15 +30,17 @@ nav {
         text-decoration: none;
     }
 
-    a:hover:not(.active) {
+    a:hover:not(.active) .Navbar{
         background-color: #292929;
         border-radius: 15px;
     }
 
     .active {
-        background-color: #ff6696;
-        color: #000000;
-        border-radius: 15px;
+        a {
+            background-color: #ff6696;
+            color: #000000;
+            border-radius: 15px;
+        }
     }
 
     .homeSVG{
@@ -51,5 +53,14 @@ nav {
             width: 50px;
         }
     }
+    .mhome {
+        display: none;
+    }
+    .mimg {
+        display: none;
+    }
 
+    .activePage {
+        display: none;
+    }
 }

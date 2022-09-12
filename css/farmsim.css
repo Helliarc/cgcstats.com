@@ -19,13 +19,12 @@ a:hover {
 body {
   background: #313131;
   padding-top: 55px;
-  height: 100vh;
 }
 
 .nftSelectMenu ul {
   list-style-type: none;
   padding: 0px;
-  min-width: 550px;
+  min-width: 300px;
   width: 60%;
   max-width: 1000px;
   margin: auto;
@@ -50,7 +49,7 @@ body {
 .nftSelectMenu .theNFT {
   text-align: center;
   padding: 0;
-  min-width: 550px;
+  min-width: 300px;
   width: 60%;
   max-width: 1000px;
   margin: auto;
@@ -59,7 +58,6 @@ body {
   display: inline-block;
 }
 .nftSelectMenu .theButton {
-  min-width: 550px;
   width: 60%;
   max-width: 1000px;
   margin: auto;
@@ -87,12 +85,13 @@ body {
   list-style-type: none;
   text-align: center;
   padding: 0px;
-  min-width: 450px;
-  width: 60%;
-  max-width: 600px;
+  min-width: 350px;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
   border-radius: 10px;
   margin-bottom: 10px;
+  z-index: 0;
 }
 .farmTable ul {
   display: inline-block;
@@ -119,6 +118,7 @@ body {
 .farmTable li p {
   display: inline-block;
   width: 100%;
+  font-size: 2.7vw;
 }
 .farmTable li .NYAol {
   float: left;
@@ -132,6 +132,7 @@ body {
   border-radius: 4px;
   background-color: #ffe6ee;
   box-shadow: 4px 4px #802642;
+  font-size: 2.3vw;
 }
 
 .periodEnhance ul {
