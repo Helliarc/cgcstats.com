@@ -15,7 +15,7 @@
             <ul class="Navbar">
                 <li class="dhome"><a href="index.html"><img alt="homePaw" width=50 src="img/homePaw.svg"></a></li>
                 <li class="mhome"><a href="index.html">Home</a></li>
-                <li class="ddContent active"><a href="cgcstats.html">CGC Stats</a></li>
+                <li class="ddContent active"><a href="cgcstats.php">CGC Stats</a></li>
                 <li class="ddContent"><a href="farmingsimulator.html">Farming Simulator</a></li>
                 <li class="ddContent"><a href="fusesimulator.html">Fuse Simulator</a></li>
             </ul>
@@ -28,5 +28,26 @@
     <p class="cgcstats"><a href="cgcstats.html">CatgirlCoin Stats</a> - Viewing stats on the CatgirlCoin Token can be a drag, clicking this link, then clicking this link, then comparing data in an excel spreadsheet to THIS link... 
             I've decided to do that legwork for you and display statistical information in a central place!  Circulating supply minus burn.  CGC/BNB and CGC/USD pairs(and their graphs!). Liquidity Pool token information.  Current Total Farming Power.  
             And many, many more! Stay tuned for this one!</p>
+
+    <p class="linebreak"></p>
+
+    <div id="statsTable">
+
+        <ul>
+            <li id="">CGC Price($USD): <span id="cgcPriceUSD"></span></li>
+            <li id="">CGC Price($BNB): <span id="cgcPriceBNB"></span></li>
+            <li id="">Total Farming Power: <span id="cgctotalFP"></span></li>
+            <li id="">Season 1 Farming Pool Size: <span id="cgcPoolSize"></span></li>
+            <li id="">Total Catgirl Coin Locked: <span id="cgcLocked"></span></li>
+            <li id="">Last Updated: <span id="updated"></span></li>
+        </ul>
+    </div>
+
+    <div id="button">
+        <button type="button" class="addNFTbutton" onclick="loadStats();">update</button>
+    </div>        
+
+    <script src="js/cgcstats/current.js"></script>
+    <script type="text/javascript">loadStats();</script>
 </body>
 </html>
