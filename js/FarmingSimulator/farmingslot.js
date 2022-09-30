@@ -100,8 +100,6 @@ let slot5 = new FarmingSlot("Slot 5", 5, null, [null, "slot5img"], [null, "slot5
 
 var farmingSlots = [slot1, slot2, slot3, slot4, slot5];
 
-var seasonsList = ["Season 1", "Season 2"];
-
 /*
 Farming Slot Objects Instantiation for the saved farming Tables.
 */

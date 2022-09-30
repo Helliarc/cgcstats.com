@@ -15,7 +15,7 @@
             <ul class="Navbar">
                 <li class="dhome"><a href="index.html"><img alt="homePaw" width=50 src="img/homePaw.svg"></a></li>
                 <li class="mhome"><a href="index.html">Home</a></li>
-                <li class="ddContent"><a href="cgcstats.php">CGC Stats</a></li>
+                <li class="ddContent"><a href="cgcstats.html">CGC Stats</a></li>
                 <li class="ddContent"><a href="farmingsimulator.html">Farming Simulator</a></li>
                 <li class="ddContent active"><a href="fusesimulator.html">Fuse Simulator</a></li>
             </ul>
@@ -28,7 +28,7 @@
     <p class="fusesimlnk"><a href="fusesimulator.html">NekoFuse Simulator</a> - This tool definitely takes the *burn* out of burning NFTs...  But like any game of chance, people love to "practice" before they play!  No Maes will be harmed 
         in this process.</p>
 
-    <p class="linebreak"></p>
+    <p class="linebreak"></p> 
 
     <div class="nftSelectMenu">
         <ul>
@@ -39,11 +39,21 @@
             <li><form onkeypress="return event.keyCode != 13">
                 <label for="nyaScore">NYA Score: </label><input type="number" id="nyaScore" min='1' max="100" placeholder="50">
                 </form></li>
-            <li><label for="slotSelect">Burn Slot: </label><select id="slotSelect"></select></li>
+            <li><label for="slotSelect">Fuse Slot: </label><select id="slotSelect"></select></li>
         </ul>
-        <ul class="theButton">
+        
+    </div>
+
+    <div class="addNFTButton">
+        <ul>
             <li><button type="button" class="addNFTbutton" onclick="addNFT();">Add NFT</button></li>
             <li id="errorAdd"></li>
+        </ul>
+    </div>
+
+    <div class="resetFuseButton">
+        <ul>
+            <li><button type="button" class="resetFuseButton" onclick="resetFuse();">Reset</button></li>
         </ul>
     </div>
 
@@ -72,31 +82,52 @@
         </ul>
         <ul class="row row2">
             <li id="slot6">
-                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot1img"></p>
-                <p class="NYAol">NYA: <span id="slot1nya"></span></p>
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot6img"></p>
+                <p class="NYAol">NYA: <span id="slot6nya"></span></p>
             </li>
             <li id="slot7">
-                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot2img" onclick=""></p>
-                <p class="NYAol">NYA: <span id="slot2nya"></span></p>
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot7img" onclick=""></p>
+                <p class="NYAol">NYA: <span id="slot7nya"></span></p>
             </li>
             <li id="slot8">
-                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot3img"></p>
-                <p class="NYAol">NYA: <span id="slot3nya"></span></p>
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot8img"></p>
+                <p class="NYAol">NYA: <span id="slot8nya"></span></p>
             </li>
             <li id="slot9">
-                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot4img"></p>
-                <p class="NYAol">NYA: <span id="slot4nya"></span></p>
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot9img"></p>
+                <p class="NYAol">NYA: <span id="slot9nya"></span></p>
             </li>
             <li id="slot10">
-                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot5img"></p>
-                <p class="NYAol">NYA: <span id="slot5nya"></span></p>
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="slot10img"></p>
+                <p class="NYAol">NYA: <span id="slot10nya"></span></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fuseButton">
+        <ul>
+            <li><button type="button" class="fuseButton" onclick="fuseNFT();">Fuse</button></li>
+        </ul>
+    </div>
+
+    <div class="fuseResult">
+        <ul class="result">
+            <li id="result1">
+                <p class="totalNYA">Total NYA: <span id="totalNYA"></span></p>
+                <p class="roll">Your Rolled: <span id="roll"></span></p>
+                <p class="resultStatus" id="resultStatus"></p>
+                <p><img src="img/blank.jpg" alt="No NFT Selected" id="resultimg"></p>
+                <p class="NYAol">NYA: <span id="resultnya"></span></p>
             </li>
         </ul>
     </div>
 
     <script src="js/catgirlnft.js"></script>
     <script src="js/testingFunctions.js"></script>
+    <script src="js/FuseSimulator/fuseslot.js"></script>
     <script src="js/FuseSimulator/init.js"></script>
+    <script src="js/FuseSimulator/fuse.js"></script>
 
+    <script type="text/javascript">populateForms();</script>
 </body>
 </html>

@@ -52,6 +52,60 @@ h1 {
   border-bottom: 2px #ff6696 solid;
 }
 
+.addNFTButton {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.addNFTButton ul {
+  list-style-type: none;
+}
+.addNFTButton button {
+  background-color: #ff6696;
+  border-radius: 5px;
+  width: 150px;
+  height: 33px;
+  border: 1px #802642 solid;
+}
+.addNFTButton button:hover {
+  background-color: #802642;
+  border-color: #ff6696;
+  box-shadow: 4px 4px #ff6696;
+}
+.addNFTButton button:active {
+  background-color: #ff6696;
+  border: 1px #802642 solid;
+  box-shadow: 4px 4px #802642;
+}
+
+.resetFuseButton {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.resetFuseButton ul {
+  list-style-type: none;
+}
+.resetFuseButton button {
+  background-color: #ff6696;
+  border-radius: 5px;
+  width: 150px;
+  height: 33px;
+  border: 1px #802642 solid;
+}
+.resetFuseButton button:hover {
+  background-color: #802642;
+  border-color: #ff6696;
+  box-shadow: 4px 4px #ff6696;
+}
+.resetFuseButton button:active {
+  background-color: #ff6696;
+  border: 1px #802642 solid;
+  box-shadow: 4px 4px #802642;
+}
+
 .nftSelectMenu ul {
   list-style-type: none;
   padding: 0px;
@@ -87,29 +141,6 @@ h1 {
 }
 .nftSelectMenu .theNFT li {
   display: inline-block;
-}
-.nftSelectMenu .theButton {
-  width: 60%;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-.nftSelectMenu .theButton button {
-  background-color: #ff6696;
-  border-radius: 5px;
-  width: 150px;
-  height: 33px;
-  border: 1px #802642 solid;
-}
-.nftSelectMenu .theButton button:hover {
-  background-color: #802642;
-  border-color: #ff6696;
-  box-shadow: 4px 4px #ff6696;
-}
-.nftSelectMenu .theButton button:active {
-  background-color: #ff6696;
-  border: 1px #802642 solid;
-  box-shadow: 4px 4px #802642;
 }
 
 .burnTable {
@@ -152,7 +183,43 @@ h1 {
   width: 100%;
   font-size: 2.7vw;
 }
+@media screen and (min-width: 800px) {
+  .burnTable li p {
+    font-size: 20px;
+  }
+}
 .burnTable li .NYAol {
   float: left;
   color: #ff80c5;
+}
+
+.fuseButton {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.fuseButton ul {
+  list-style-type: none;
+}
+.fuseButton button {
+  background-color: #ff6696;
+  border-radius: 5px;
+  width: 150px;
+  height: 33px;
+  border: 1px #802642 solid;
+}
+.fuseButton button:hover {
+  background-color: #802642;
+  border-color: #ff6696;
+  box-shadow: 4px 4px #ff6696;
+}
+.fuseButton button:active {
+  background-color: #ff6696;
+  border: 1px #802642 solid;
+  box-shadow: 4px 4px #802642;
+}
+
+.result {
+  list-style-type: none;
 }/*# sourceMappingURL=fusesim.css.map */

@@ -32,9 +32,10 @@ let Raven   = new CatgirlNFT("Raven"  , 2, 3, 1600 , 8000  , false, "img/s2/4Rav
 let Maiko   = new CatgirlNFT("Maiko"  , 2, 3, 1600 , 8000  , false, "img/s2/4MaikoHS.jpg");
 let Feline  = new CatgirlNFT("Feline" , 2, 4, 32000, 240000, false, "img/s2/5FelineHS.jpg");
 
-
 var season1NFT = [Mae1, Lisa, Kita, Aoi, Hana, Rin, Celeste, Mittsy];
 var season2NFT = [Rubi, Mae2, Eve, Lulu, Coco, Grace, Yuna, Raven, Maiko, Feline];
+
+var seasonsList = ["Season 1", "Season 2"];
 
 /* 
 Function returns the NFT OBJECT by name, useful when you want all of the base data of a specific NFT 

@@ -42,4 +42,16 @@ h1 {
   margin: auto;
   padding-top: 25px;
   border-bottom: 2px #ff80c5 solid;
+}
+
+#statsTable .statsList {
+  list-style-type: none;
+}
+#statsTable .statsList ul {
+  list-style-type: none;
+  padding: 0px;
+  min-width: 300px;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
 }/*# sourceMappingURL=stats.css.map */

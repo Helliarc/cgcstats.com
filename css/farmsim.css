@@ -120,6 +120,11 @@ body {
   width: 100%;
   font-size: 2.7vw;
 }
+@media screen and (min-width: 800px) {
+  .farmTable li p {
+    font-size: 20px;
+  }
+}
 .farmTable li .NYAol {
   float: left;
   color: #ff80c5;
@@ -136,6 +141,11 @@ body {
   background-color: #ffe6ee;
   box-shadow: 4px 4px #802642;
   font-size: 2.3vw;
+}
+@media screen and (min-width: 800px) {
+  .farmTable li .enhanceButton {
+    font-size: 20px;
+  }
 }
 
 .periodEnhance ul {

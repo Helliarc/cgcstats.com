@@ -42,6 +42,7 @@ h1 {
     margin: auto;
     margin-top: 25px;
     font-size: 1.3em;
+    
 }
 
 .linebreak { //add a <p class="linebreak"></p> anywhere in the HTML that you want this line-break...
@@ -50,6 +51,66 @@ h1 {
     padding-top: 25px;
     margin-bottom: 25px;
     border-bottom: 2px #ff6696 solid;
+}
+
+.addNFTButton{
+    
+    width: 60%;
+    max-width: 1000px;
+    margin: auto;
+    text-align:center;
+
+    ul {
+        list-style-type: none;
+    }
+
+    button{
+        background-color:#ff6696;
+        border-radius: 5px;
+        width: 150px;
+        height: 33px;
+        border: 1px #802642 solid;
+    }
+    button:hover{
+        background-color: #802642;
+        border-color: #ff6696;
+        box-shadow: 4px 4px #ff6696;
+    }
+    button:active{
+        background-color:#ff6696;
+        border: 1px #802642 solid;
+        box-shadow: 4px 4px #802642;
+    }
+}
+
+.resetFuseButton{
+    
+    width: 60%;
+    max-width: 1000px;
+    margin: auto;
+    text-align:center;
+
+    ul {
+        list-style-type: none;
+    }
+
+    button{
+        background-color:#ff6696;
+        border-radius: 5px;
+        width: 150px;
+        height: 33px;
+        border: 1px #802642 solid;
+    }
+    button:hover{
+        background-color: #802642;
+        border-color: #ff6696;
+        box-shadow: 4px 4px #ff6696;
+    }
+    button:active{
+        background-color:#ff6696;
+        border: 1px #802642 solid;
+        box-shadow: 4px 4px #802642;
+    }
 }
 
 .nftSelectMenu {
@@ -98,33 +159,6 @@ h1 {
             display: inline-block;
         }
     }
-
-    .theButton{
-    
-        width: 60%;
-        max-width: 1000px;
-        margin: auto;
-        text-align:center;
-
-        button{
-            background-color:#ff6696;
-            border-radius: 5px;
-            width: 150px;
-            height: 33px;
-            border: 1px #802642 solid;
-        }
-        button:hover{
-            background-color: #802642;
-            border-color: #ff6696;
-            box-shadow: 4px 4px #ff6696;
-        }
-        button:active{
-            background-color:#ff6696;
-            border: 1px #802642 solid;
-            box-shadow: 4px 4px #802642;
-        }
-    }
-
 }
 
 .burnTable {
@@ -170,6 +204,12 @@ h1 {
             font-size: 2.7vw;
         }
 
+        @media screen and (min-width: 800px) {
+            p {
+               font-size: 20px;
+            }
+          }
+
         .NYAol {
             // position:absolute;
             // bottom: -20%;
@@ -177,4 +217,38 @@ h1 {
             color: #ff80c5;     
         }
     }  
+}
+
+.fuseButton{
+    
+    width: 60%;
+    max-width: 1000px;
+    margin: auto;
+    text-align:center;
+
+    ul {
+        list-style-type: none;
+    }
+
+    button{
+        background-color:#ff6696;
+        border-radius: 5px;
+        width: 150px;
+        height: 33px;
+        border: 1px #802642 solid;
+    }
+    button:hover{
+        background-color: #802642;
+        border-color: #ff6696;
+        box-shadow: 4px 4px #ff6696;
+    }
+    button:active{
+        background-color:#ff6696;
+        border: 1px #802642 solid;
+        box-shadow: 4px 4px #802642;
+    }
+}
+
+.result {
+    list-style-type: none;
 }
