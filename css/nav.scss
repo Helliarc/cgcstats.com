@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: font1;
+    src: url(../fonts/goodtimesrg.otf);
+  }
+
 nav {
     position: fixed;
     top: 0;
@@ -19,6 +24,7 @@ nav {
     }
 
     li{
+        font-family: font1;
         float: left;
         line-height: 50px;
         align-items: center;

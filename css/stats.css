@@ -1,8 +1,13 @@
 * {
+  font-family: myFirstFont;
   box-sizing: border-box;
   margin: 0;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/goodtimesrg.otf);
+}
 body {
   background: #313131;
   padding-top: 55px;
@@ -29,12 +34,12 @@ h1 {
   margin-top: 25px;
 }
 
-.cgcstats {
+.description {
   text-align: center;
   size: 90%;
   margin: auto;
   margin-top: 25px;
-  font-size: 1.3em;
+  font-size: 0.75em;
 }
 
 .linebreak {
@@ -44,14 +49,40 @@ h1 {
   border-bottom: 2px #ff80c5 solid;
 }
 
-#statsTable .statsList {
-  list-style-type: none;
+.statsTable {
+  size: 100%;
+  margin-left: auto;
+  text-align: center;
 }
-#statsTable .statsList ul {
+.statsTable .statsList {
+  border: 2px red solid;
+  font-size: 0.9em;
   list-style-type: none;
   padding: 0px;
   min-width: 300px;
-  width: 60%;
+  width: 100%;
   max-width: 1000px;
   margin: auto;
+}
+.statsTable .statsList .statField {
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.statsTable .statsList .statField li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: inline-block;
+}
+.statsTable .statsList .statField .statcat {
+  text-align: right;
+  width: 50%;
+  border: 2px #ff80c5 solid;
+}
+.statsTable .statsList .statField .statres {
+  text-align: center;
+  width: 50%;
+  border: 2px orange solid;
 }/*# sourceMappingURL=stats.css.map */

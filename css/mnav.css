@@ -1,3 +1,7 @@
+@font-face {
+  font-family: font1;
+  src: url(../fonts/goodtimesrg.otf);
+}
 nav {
   position: fixed;
   top: 0;
@@ -30,13 +34,14 @@ nav .Navbar {
   display: none;
   position: absolute;
   left: 5px;
-  top: 50px;
+  top: 40px;
   min-width: 160px;
 }
 nav .Navbar a {
   text-decoration: none;
 }
 nav .Navbar li {
+  font-family: font1;
   background-color: #313131;
   align-items: center;
   line-height: 50px;
@@ -63,7 +68,7 @@ nav .activePage {
   right: 0;
   font-size: 25px;
   margin-right: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: font1, Geneva, Tahoma, sans-serif;
   color: #ff80c5;
   z-index: -1;
 }/*# sourceMappingURL=mnav.css.map */

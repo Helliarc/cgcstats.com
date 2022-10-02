@@ -1,4 +1,9 @@
+@font-face {
+  font-family: font1;
+  src: url(../fonts/goodtimesrg.otf);
+}
 * {
+  font-family: font1;
   box-sizing: border-box;
   margin: 0;
 }
@@ -39,10 +44,11 @@ h1 {
 .pinfo {
   text-align: center;
   margin: 20px;
-  font-size: 1.3em;
+  font-size: 0.75em;
 }
 
 .listhead {
+  font-size: 0.8em;
   text-align: center;
   width: 50%;
   margin: auto;
@@ -53,6 +59,7 @@ h1 {
 .featurelist {
   width: 80%;
   margin: auto;
+  font-size: 0.75em;
 }
 .featurelist li {
   padding-bottom: 20px;
