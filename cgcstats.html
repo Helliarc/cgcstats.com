@@ -11,13 +11,13 @@
 </head>
 <body>
     <nav name="navbar">
-        <div class="mhomeSVG"><img class="mimg" alt="homePaw" width=50 src="img/homePaw.svg"></li>
+        <div class="mhomeSVG"><img class="mimg" alt="homePaw" width=50 src="img/homePaw.svg">
             <ul class="Navbar">
                 <li class="dhome"><a href="index.html"><img alt="homePaw" width=50 src="img/homePaw.svg"></a></li>
                 <li class="mhome"><a href="index.html">Home</a></li>
                 <li class="ddContent active"><a href="cgcstats.html">CGC Stats</a></li>
-                <li class="ddContent"><a href="farmingsimulator.html">Farming Simulator</a></li>
-                <li class="ddContent"><a href="fusesimulator.html">Fuse Simulator</a></li>
+                <li class="ddContent"><a href="farmingsimulator.html">Farm Sim</a></li>
+                <li class="ddContent"><a href="fusesimulator.html">Fuse Sim</a></li>
             </ul>
         </div>
         <div class="activePage">CGC Stats</div>
@@ -25,27 +25,46 @@
 
     <h1>Catgirl Coin Stats</h1>
     <p class="linebreak"></p>
-    <p class="cgcstats"><a href="cgcstats.html">CatgirlCoin Stats</a> - Viewing stats on the CatgirlCoin Token can be a drag, clicking this link, then clicking this link, then comparing data in an excel spreadsheet to THIS link... 
+    <p class="description"><a href="cgcstats.html">CatgirlCoin Stats</a> - Viewing stats on the CatgirlCoin Token can be a drag, clicking this link, then clicking this link, then comparing data in an excel spreadsheet to THIS link... 
             I've decided to do that legwork for you and display statistical information in a central place!  Circulating supply minus burn.  CGC/BNB and CGC/USD pairs(and their graphs!). Liquidity Pool token information.  Current Total Farming Power.  
             And many, many more! Stay tuned for this one!</p>
 
     <p class="linebreak"></p>
 
     <div class="statsTable">
-
         <ul class="statsList">
-            <li id="">CGC Price($USD): <span id="cgcPriceUSD"></span></li>
-            <li id="">CGC Price($BNB): <span id="cgcPriceBNB"></span></li>
-            <li id="">Total Farming Power: <span id="cgctotalFP"></span></li>
-            <li id="">Season 1 Farming Pool Size: <span id="cgcPoolSize"></span></li>
-            <li id="">Total Catgirl Coin Locked: <span id="cgcLocked"></span></li>
-            <li id="">Last Updated: <span id="updated"></span></li>
+            <li></li>
+                <ul class="statField">
+                    <li class="statcat">CGC Price($USD):</li>
+                    <li class="statres" id="cgcPriceUSD"></li>
+                </ul>
+            <li></li>
+                <ul class="statField">
+                    <li class="statcat">CGC Price($BNB):</li>
+                    <li class="statres" id="cgcPriceBNB"></li>
+                </ul>
+            <li></li>
+                <ul class="statField">
+                    <li class="statcat">Total Farming Power:</li>
+                    <li class="statres" id="cgctotalFP"></li>
+                </ul>
+            <li></li>
+                <ul class="statField">
+                    <li class="statcat">Season 1 Farming Pool Size:</li>
+                    <li class="statres" id="cgcPoolSize"></li>
+                </ul>
+            <li></li>
+                <ul class="statField">
+                    <li class="statcat">Total Catgirl Coin Locked:</li>
+                    <li class="statres" id="cgcLocked"></li>
+                </ul>
+            <li></li>
+                <ul class="statField">
+                    <li class="statcat">Last Updated:</li>
+                    <li class="statres" id="updated"></li>
+                </ul>
         </ul>
-    </div>
-
-    <div id="button">
-        <button type="button" class="addNFTbutton" onclick="loadStats();">update</button>
-    </div>        
+    </div>     
 
     <script src="js/cgcstats/current.js"></script>
     <script type="text/javascript">loadStats();</script>
