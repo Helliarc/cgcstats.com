@@ -1,4 +1,4 @@
-# cgcfarmingsimulator
+# cgcstats.com
 Source code for CGC Farming Simulator - cgcstats.com
 
 This is the public repository for the CGC Farming Simulator curated by Helliarc.  
