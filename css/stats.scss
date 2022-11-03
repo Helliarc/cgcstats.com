@@ -59,7 +59,7 @@ h1 {
     text-align: center;
     
     .statsList {  
-        border: 2px red solid;
+        //border: 2px red solid;
         font-size: .90em; 
         list-style-type: none;
         padding: 0px;
@@ -75,21 +75,23 @@ h1 {
             text-align: center;
             margin: 0px;
             padding: 0px;
+
             li {
                 margin: 0px;
                 padding: 0px;
                 list-style-type: none;
-                display: inline-block;
+                //display: inline-block;
             } 
             .statcat{
-                text-align: right;
-                width: 50%;
-                border:2px #ff80c5 solid;
+                color:orange;
+                text-decoration: underline;
+                text-align: left;
+                width: 100%;
             }
             .statres{
-                text-align: center;
-                width: 50%;
-                border:2px orange solid;
+                text-align: left;
+                width: 100%;
+             
             }
         }
     }

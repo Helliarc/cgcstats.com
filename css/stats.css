@@ -55,7 +55,6 @@ h1 {
   text-align: center;
 }
 .statsTable .statsList {
-  border: 2px red solid;
   font-size: 0.9em;
   list-style-type: none;
   padding: 0px;
@@ -74,15 +73,14 @@ h1 {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
-  display: inline-block;
 }
 .statsTable .statsList .statField .statcat {
-  text-align: right;
-  width: 50%;
-  border: 2px #ff80c5 solid;
+  color: orange;
+  text-decoration: underline;
+  text-align: left;
+  width: 100%;
 }
 .statsTable .statsList .statField .statres {
-  text-align: center;
-  width: 50%;
-  border: 2px orange solid;
+  text-align: left;
+  width: 100%;
 }/*# sourceMappingURL=stats.css.map */
