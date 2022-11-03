@@ -1,1 +1,2 @@
+202211031730: Adjusted Styles in cgcstats.com/cgcstats.html and CSS to make the Display of Data more appealing.
 202211031455: Created ChangeLog.txt in order to attempt verbose record of changes, will most likely deprecate itself as a better feature emerges or is forgotten due to time and interest constraints.
