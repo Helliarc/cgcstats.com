@@ -1,0 +1,1 @@
+202211031455: Created ChangeLog.txt in order to attempt verbose record of changes, will most likely deprecate itself as a better feature emerges or is forgotten due to time and interest constraints.
