@@ -32,47 +32,96 @@
     <p class="linebreak"></p>
 
     <div class="statsTable">
-        <ul class="statsList">
-            <li></li>
-                <ul class="statField">
+        <!---->
+        <ul class="statHeader">
+            <li class="statField">
+                <ul>
                     <li class="statcat">CGC Price($USD):</li>
                     <li class="statres" id="cgcPriceUSD"></li>
                 </ul>
-                <div>A Graph Object</div>
-            <li></li>
-                <ul class="statField">
+            </li>
+            <li class="statHeaderButton"> <button type="button" id="buttonCGCUSD" onclick="showChart(this.id);">Show Chart</button> </li>
+        </ul>
+        <div class="chartView">
+            <canvas id="chartCGCUSD">
+                
+            </canvas>
+        </div>
+        <!---->
+        <ul class="statHeader">
+            <li class="statField">
+                <ul>
                     <li class="statcat">CGC Price($BNB):</li>
                     <li class="statres" id="cgcPriceBNB"></li>
                 </ul>
-                <div>A Graph Object</div>
-            <li></li>
-                <ul class="statField">
+            </li>
+            <li class="statHeaderButton"> <button type="button" id="buttonCGCBNB" onclick="showChart(this.id);">Show Chart</button> </li>
+        </ul>
+        <div class="chartView">
+            <canvas id="chartCGCBNB">
+                
+            </canvas>
+        </div>
+        <!---->
+        <ul class="statHeader">
+            <li class="statField">
+                <ul>
                     <li class="statcat">Total Farming Power:</li>
                     <li class="statres" id="cgctotalFP"></li>
                 </ul>
-                <div>A Graph Object</div>
-            <li></li>
-                <ul class="statField">
+            </li>
+            <li class="statHeaderButton"> <button type="button" id="buttonTFP" onclick="showChart(this.id);">Show Chart</button> </li>
+        </ul>
+        <div class="chartView">
+            <canvas id="chartTFP">
+                
+            </canvas>
+        </div>
+        <!---->
+        <ul class="statHeader">
+            <li class="statField">
+                <ul>
                     <li class="statcat">Season 1 Farming Pool Size:</li>
                     <li class="statres" id="cgcPoolSize"></li>
                 </ul>
-                <div>A Graph Object</div>
-            <li></li>
-                <ul class="statField">
+            </li>
+            <li class="statHeaderButton"> <button type="button" id="buttonS1PS" onclick="showChart(this.id);">Show Chart</button> </li>
+        </ul>
+        <div class="chartView">
+            <canvas id="chartS1PS">
+                
+            </canvas>
+        </div>
+        <!---->
+        <ul class="statHeader">
+            <li class="statField">
+                <ul>
                     <li class="statcat">Total Catgirl Coin Locked:</li>
                     <li class="statres" id="cgcLocked"></li>
                 </ul>
-                <div>A Graph Object</div>
-            <li></li>
-                <ul class="statField">
-                    <li class="statcat">Last Updated:</li>
-                    <li class="statres" id="updated"></li>
-                </ul>
-                <div>A Graph Object</div>
+            </li>
+            <li class="statHeaderButton"> <button type="button" id="buttonCGCLock" onclick="showChart(this.id);">Show Chart</button> </li>
+        </ul>
+        <div class="chartView">
+            <canvas id="chartCGCLock">
+                
+            </canvas>
+        </div>
+        <!---->
+        <ul class="statField">
+            <li class="statcat">Last Updated:</li>
+            <li class="statres" id="updated"></li>
         </ul>
     </div>     
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/cgcstats/current.js"></script>
+    <script src="js/cgcstats/charts/cgcusd.js"></script>
+    <script src="js/cgcstats/charts/cgcbnb.js"></script>
+    <script src="js/cgcstats/charts/totalFP.js"></script>
+    <script src="js/cgcstats/charts/s1PoolSize.js"></script>
+    <script src="js/cgcstats/charts/cgcLock.js"></script>
+    <script src="js/cgcstats/charts/chart.js"></script>
     <script type="text/javascript">loadStats();</script>
 </body>
 </html>

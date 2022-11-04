@@ -1,2 +1,4 @@
+202211031812: Adjust JS in cgcstats.com/cgcstats/current.js to add comma separators to display output and use client time for update field.
+    Added addition features on cgcstats page (implemented foundation for chart.js, added files and objects associated with chart.js)
 202211031730: Adjusted Styles in cgcstats.com/cgcstats.html and CSS to make the Display of Data more appealing.
 202211031455: Created ChangeLog.txt in order to attempt verbose record of changes, will most likely deprecate itself as a better feature emerges or is forgotten due to time and interest constraints.

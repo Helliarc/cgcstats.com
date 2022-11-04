@@ -20,6 +20,10 @@ li {
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   color: #ffe6ee;
 }
@@ -50,37 +54,63 @@ h1 {
 }
 
 .statsTable {
-  size: 100%;
   margin-left: auto;
   text-align: center;
+  margin-top: 25px;
 }
-.statsTable .statsList {
+.statsTable .statHeader {
   font-size: 0.9em;
-  list-style-type: none;
   padding: 0px;
   min-width: 300px;
   width: 100%;
   max-width: 1000px;
   margin: auto;
+  display: flex;
 }
-.statsTable .statsList .statField {
+.statsTable .statHeader .statField {
+  width: 50%;
+  padding: 0px;
+  text-align: left;
+}
+.statsTable .statHeader .statField ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
   width: 100%;
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
+  display: inline;
 }
-.statsTable .statsList .statField li {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-}
-.statsTable .statsList .statField .statcat {
+.statsTable .statHeader .statField ul .statcat {
   color: orange;
   text-decoration: underline;
-  text-align: left;
   width: 100%;
+  text-align: left;
 }
-.statsTable .statsList .statField .statres {
-  text-align: left;
+.statsTable .statHeader .statField ul .statres {
   width: 100%;
+  text-align: left;
+}
+.statsTable .statHeader .statHeaderButton {
+  width: 50%;
+  text-align: right;
+  align-self: flex-end;
+}
+
+#chartCGCUSD {
+  display: none;
+}
+
+#chartCGCBNB {
+  display: none;
+}
+
+#chartTFP {
+  display: none;
+}
+
+#chartS1PS {
+  display: none;
+}
+
+#chartCGCLock {
+  display: none;
 }/*# sourceMappingURL=stats.css.map */

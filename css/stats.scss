@@ -17,9 +17,12 @@ body {
 }
 
 li {
-   
     color: #ffe6ee;
     text-align: center;
+}
+
+ul {
+    list-style-type: none;
 }
 
 a{
@@ -53,47 +56,74 @@ h1 {
 }
 
 .statsTable{
-    
-    size: 100%;
     margin-left: auto;
     text-align: center;
+    margin-top: 25px;
     
-    .statsList {  
-        //border: 2px red solid;
+    .statHeader {  
+        //border: 1px red solid;
         font-size: .90em; 
-        list-style-type: none;
         padding: 0px;
-        min-width: 300px;
+        min-width: 300px;   
         width: 100%;
         max-width: 1000px;
         margin: auto;
-
+        display: flex;
 
         .statField{
-           
-            width: 100%;
-            text-align: center;
-            margin: 0px;
+            //border: 1px green solid;
+            width: 50%;
             padding: 0px;
-
-            li {
+            text-align: left;
+           
+            ul {
                 margin: 0px;
                 padding: 0px;
-                list-style-type: none;
-                //display: inline-block;
+                text-align: left;
+                width: 100%;
+                display: inline;
+
+                .statcat{
+                    color:orange;
+                    text-decoration: underline;
+                    width: 100%;
+                    text-align: left;
+                }
+                .statres{
+                    width: 100%;
+                    text-align: left;
+                }
             } 
-            .statcat{
-                color:orange;
-                text-decoration: underline;
-                text-align: left;
-                width: 100%;
-            }
-            .statres{
-                text-align: left;
-                width: 100%;
-             
-            }
+
+        }
+
+        .statHeaderButton{
+            //border: 1px yellow solid;
+            width: 50%;
+            text-align: right;
+            align-self:flex-end;
         }
     }
+
+    // .chartView{
+
+    // }
 }
+
+#chartCGCUSD {
+    display: none;
+}
+#chartCGCBNB {
+    display: none;
+}
+#chartTFP {
+    display: none;
+}
+#chartS1PS {
+    display: none;
+}
+#chartCGCLock {
+    display: none;
+}
+
 
