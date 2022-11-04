@@ -27,11 +27,11 @@ class stats{
     update(){
         this.time = this.currentStats[0][0];
         document.getElementById("updated").innerHTML = unixToTime(this.time);
-        this.poolSize = this.currentStats[0][1];
+        this.poolSize = new Number(this.currentStats[0][1]).toLocaleString();
         document.getElementById("cgcPoolSize").innerHTML = this.poolSize;
-        this.totalFP = this.currentStats[0][2];
+        this.totalFP = new Number(this.currentStats[0][2]).toLocaleString();
         document.getElementById("cgctotalFP").innerHTML = this.totalFP;
-        this.totalLock = this.currentStats[0][3];
+        this.totalLock = new Number(this.currentStats[0][3]).toLocaleString();
         document.getElementById("cgcLocked").innerHTML = this.totalLock;
         //Convert Scientific Notation String to a Number object
         this.usd = new Number(this.currentStats[0][4]);
@@ -52,7 +52,8 @@ function loadStats(){
 
 //Convert the Unix time stored in DB to Date-time for readability
 function unixToTime(unix){
-    d = new Date(unix * 1000);
+    var d = new Date(unix * 1000);
+    d.setSeconds(0,0);
     utcString = d.toUTCString();
 
     return utcString;
