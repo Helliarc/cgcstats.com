@@ -1,3 +1,5 @@
+202211041537: Create Queries for Chart Data and plug Data to Charts
+	query(MySQL - hourly): SELECT DISTINCT minute(FROM_UNIXTIME(time)),time,usd FROM `stats` where minute(FROM_UNIXTIME(time)) = 00;
 202211031812: Adjust JS in cgcstats.com/cgcstats/current.js to add comma separators to display output and use client time for update field.
     Added addition features on cgcstats page (implemented foundation for chart.js, added files and objects associated with chart.js)
 202211031730: Adjusted Styles in cgcstats.com/cgcstats.html and CSS to make the Display of Data more appealing.
